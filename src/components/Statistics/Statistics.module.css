@@ -1,0 +1,24 @@
+.statistics{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 15px;
+    padding: 15px;
+    border: solid #A49E9E;
+}
+.title{
+    font-size: 35px;
+}
+.statList{
+    display: flex;
+    align-items: center;   
+}
+.statItem{
+    display: flex;
+    flex-direction: column;
+    align-items: center;  
+    padding-left: 30px;
+    padding-right: 30px;
+    border: solid #A49E9E;
+    
+}
