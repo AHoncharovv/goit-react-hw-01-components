@@ -4,26 +4,24 @@ import styles from './Statistics.module.css';
 
 function Statistics({ title, stats }) {
     return (
-
         <section className={styles.statistics}>
             {title && <h2 className={styles.title}> {title} </h2>}
-
             <ul className={styles.statList}>
-                {stats.map(stat => <li className={styles.statItem} key={stat.id}>
-                    <StatisticCard
-                        label={stat.label}
-                        percentage={stat.percentage}
-                    /> 
-                </li> )}   
+                {stats.map(stat => (
+                    <li className={styles.statItem} key={stat.id}>
+                    <StatisticCard label={stat.label} percentage={stat.percentage}/> 
+                    </li>
+                ))}   
             </ul>
-        </section>
-        
+        </section>    
     ) 
 };
 
-Statistics.propTypes = {
+Statistics.propTypes = { 
     title: PropTypes.string,
-    stats:PropTypes.array.isRequired,
+    stats: PropTypes.arrayOf(PropTypes.shape({
+        id: PropTypes.string.isRequired
+  }))
 };
 
 export default Statistics;

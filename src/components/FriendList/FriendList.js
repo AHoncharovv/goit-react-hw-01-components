@@ -5,13 +5,12 @@ function FriendList({ friends }) {
     return (
         <ul className={styles.friendList}>
             {friends.map(friend => (
-                <li className={styles.item} key={friend.id}>                  
-                    {friend.isOnline ? <span className={styles.status}></span> : <span className={styles.statusOffline}></span>}
+                <li className={styles.item} key={friend.id}>   
+                    <span className={friend.isOnline ? styles.status : styles.statusOffline}></span>
                     <img className={styles.avatar} src={friend.avatar} alt="User avatar" width="48" />
                     <p className="name"> {friend.name} </p>
                 </li>
             ))}
- 
         </ul>
     );
 };

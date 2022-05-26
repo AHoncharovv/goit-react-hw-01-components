@@ -1,7 +1,8 @@
-import profileData from '../user.json';
-import statData from '../data.json';
-import friends from '../friends.json'
-import transactions from '../transactions.json';
+import profileData from './data/user.json';
+import statData from './data/data.json';
+import friends from './data/friends.json'
+import transactions from './data/transactions.json';
+
 import Profile from './Profile/Profile';
 import Statistics from './Statistics/Statistics'
 import FriendList from './FriendList/FriendList';
@@ -22,15 +23,15 @@ export const App = () => {
       {/* React homework template */}
 
       <Profile
-      username={profileData.username}
-      tag={profileData.tag}
-      location={profileData.location}
-      avatar={profileData.avatar}
-      stats={profileData.stats}
+        username={profileData.username}
+        tag={profileData.tag}
+        location={profileData.location}
+        avatar={profileData.avatar}
+        stats={profileData.stats}
       />
 
       <Statistics
-        title={"Upload stats"}
+        title="Upload stats"
         stats={statData}
       />
 
